@@ -1,7 +1,6 @@
 package com.atguigu;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 public class HelloWorld {
     public static void main(String[] args){
@@ -17,6 +16,17 @@ public class HelloWorld {
         strings.add("c");
         for (String s : strings) {
             System.out.println(s);
+        }
+
+        HashMap<String, String> map = new HashMap<String, String>();
+        map.put("name","aa");
+        map.put("year","12");
+        map.put("address","cq");
+        Set<String> set=map.keySet();
+        Iterator<String> iterator=set.iterator();
+        while (iterator.hasNext()) {
+            String key =iterator.next();
+            System.out.println(key+">^^xx^^>缓冲中>^^xx^^>"+map.get(key));
         }
     }
 }
